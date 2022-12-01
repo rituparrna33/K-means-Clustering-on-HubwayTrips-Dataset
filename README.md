@@ -1,6 +1,6 @@
 # K-means-Clustering-on-HubwayTrips-Dataset
 
-# R Script File for K-means Clustering in R where normalization is required
+#####R Script File for K-means Clustering in R where normalization is required
 getwd()
 
 hubwaytrip = read.csv("HubwayTrips.csv")
@@ -8,7 +8,7 @@ hubwaytrip = read.csv("HubwayTrips.csv")
 str(hubwaytrip)
 
 
-# Normalization
+###### Normalization
 install.packages("caret")
 library(caret)
 preproc = preProcess(hubwaytrip)
