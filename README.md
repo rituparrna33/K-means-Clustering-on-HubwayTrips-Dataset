@@ -2,6 +2,7 @@
 
 # R Script File for K-means Clustering in R where normalization is required
 getwd()
+
 hubwaytrip = read.csv("HubwayTrips.csv")
 
 str(hubwaytrip)
