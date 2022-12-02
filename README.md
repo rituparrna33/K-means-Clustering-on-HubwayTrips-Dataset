@@ -10,6 +10,8 @@ str(hubwaytrip)
 
 
 ###### Normalization
+
+
 install.packages("caret")
 library(caret)
 preproc = preProcess(hubwaytrip)
@@ -37,11 +39,14 @@ sd(hubwaytripNorm$Age)
 
 
 #### K-means clustering with 10 clusters
+
 set.seed(1234)
 KmeansClustering = kmeans(hubwaytripNorm, centers = 10)
 
 
 ##### Examination of results
+
+
 table(KmeansClustering$cluster)
 tapply(hubwaytrip$Duration, KmeansClustering$cluster, mean)
 tapply(hubwaytrip$Morning, KmeansClustering$cluster, mean)
@@ -53,7 +58,9 @@ tapply(hubwaytrip$Weekend, KmeansClustering$cluster, mean)
 tapply(hubwaytrip$Male,KmeansClustering$cluster, mean)
 tapply(hubwaytrip$Age, KmeansClustering$cluster, mean)
 
-#####Visualiseing the clusters
+##### Visualiseing the clusters
+
+
 install.packages('ggpubr')
 library(ggpubr)
 install.packages('factoextra')
